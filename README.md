@@ -1,0 +1,1 @@
+I developed a comprehensive web application for the Karnataka Forest Department using JDBC, J2EE, JSP, HTML, CSS, JavaScript, and MySQL. The project enables users to register for mountain trekking, search details using registration IDs, and cancel registrations seamlessly.
