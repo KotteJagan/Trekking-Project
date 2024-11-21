@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nethravathi Peak Trek Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            background-image: url('nethra1.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-position: center; 
+            min-height: 100vh;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 140%;
+            max-width: 1000px;
+            margin-bottom: 20px;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #34495e;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 500px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const aadhar = document.forms["registrationForm"]["an"].value;
+            const phone = document.forms["registrationForm"]["pn"].value;
+
+            if (aadhar.length !== 12 || isNaN(aadhar)) {
+                alert("Please enter a valid 12-digit Aadhar Number.");
+                return false;
+            }
+
+            if (phone.length !== 10 || isNaN(phone)) {
+                alert("Please enter a valid 10-digit Phone Number.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 >Welcome to Nethravathi Peak Trek Registration</h1>
+        <form name="registrationForm" action="Nethravathi" onsubmit="return validateForm()">
+            <label>First Name*</label>
+            <input type="text" name="fn" required>
+
+            <label>Last Name*</label>
+            <input type="text" name="ln" required>
+
+            <label>Gender*</label>
+            <input type="text" name="gender" required>
+
+            <label>Aadhar Number*</label>
+            <input type="text" name="an" required>
+
+            <label>Phone Number*</label>
+            <input type="text" name="pn" required>
+
+            <label>Email Id*</label>
+            <input type="email" name="em" required>
+
+            <label>Address*</label>
+            <input type="text" name="ad" required>
+
+            <label>State*</label>
+            <input type="text" name="st" required>
+
+            <label>Pincode*</label>
+            <input type="number" name="pin" required>
+
+           
+
+            <label>Reservation Slot*</label>
+            <input type="date" name="dat" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" required> 
+                <label>I hereby declare that all the above information provided is correct. Participation in the trek is voluntary, and I will assume all responsibility for personal injury, illness, and damage as a result of any incidents or accidents that may occur.</label>
+            </div><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+
+        <form action="Netra1">
+            <h1>Know your Registration Details</h1>
+            <label>Enter your Registration Id</label>
+            <input type="text" name="fn">
+            <input type="submit" value="Submit">
+        </form>
+         <form action="Netra2">
+            <h1>Cancel your Registration</h1>
+            <label>Enter your Registration Id</label>
+            <input type="text" name="pn">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
